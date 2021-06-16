@@ -1,0 +1,13 @@
+<body class="singular">
+  <div id="page" class="hfeed">
+    <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
+    <div id="main">
+      <div id="primary">
+        <div id="content" role="main">
+          <%- partial('_partial/article', {post: post, index: index}) %>
+        </div>
+      </div>
+    </div>
+    <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+  </div>
+</body>
