@@ -1,3 +1,26 @@
+<header class="page-header">
+  <%
+  var title = page.title;
+
+  if (is_archive()){
+    title = __('archive_a');
+
+    if (is_month()){
+      title += ': ' + page.year + '/' + page.month;
+    } else if (is_year()){
+      title += ': ' + page.year;
+    }
+  } else if (is_category()){
+    title = __('category') + ': ' + page.category;
+  } else if (is_tag()){
+    title = __('tag') + ': ' + page.tag;
+  }
+  %>
+
+  <h1 class="page-title">
+    <% if (title){ %><%= title %><% } %>
+  </h1>
+</header>
 <% page.posts.each(function(post){ %>
   <%- partial('article', {post: post, index: true}) %>
 <% }) %>
