@@ -25,7 +25,7 @@
   <footer class="entry-meta">
     <% if (post.categories && post.categories.length){ %>
       <span class="cat-links">
-        Posted in <%- list_categories(post.categories, {
+        <%= __('posted_in')%> <%- list_categories(post.categories, {
           show_count: false,
           class: '',
           style: 'none',
@@ -35,7 +35,7 @@
       <% if (post.tags && post.tags.length){ %>
         <span class="sep"> | </span>
         <span class="tag-links">
-          Tagged <%- list_tags(post.tags, {
+          <%= __('tagged') %> <%- list_tags(post.tags, {
             show_count: false,
             class: 'article-tag',
             style: 'none',

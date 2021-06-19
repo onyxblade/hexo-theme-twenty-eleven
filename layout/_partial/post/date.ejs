@@ -1,5 +1,5 @@
 <div class="entry-meta">
-  Posted on
+  <%= __('posted_on') %>
   <a href="<%- url_for(post.path) %>">
     <time class="dt-published" datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= date(post.date, date_format) %></time>
   </a>
